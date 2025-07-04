@@ -1,0 +1,287 @@
+.partnersSection {
+    padding: 2rem 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.partnersSection::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23007bff' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    pointer-events: none;
+}
+
+.sectionTitle {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #007bff;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.sectionTitle::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    border-radius: 2px;
+}
+
+.sectionSubtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #6c757d;
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.carouselWrapper {
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+.embla {
+    overflow: hidden;
+    border-radius: 15px;
+    padding: 2rem 0;
+}
+
+.emblaContainer {
+    display: flex;
+    gap: 1rem;
+    padding: 0 1rem;
+}
+
+.emblaSlide {
+    flex: 0 0 20%;
+    min-width: 0;
+    padding: 0 0.5rem;
+}
+
+.partnerCard {
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid #e9ecef;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+}
+
+.partnerCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 123, 255, 0.1);
+    border-color: #007bff;
+}
+
+.partnerLogo {
+    max-width: 100%;
+    max-height: 60px;
+    object-fit: contain;
+    transition: all 0.3s ease;
+}
+
+.partnerCard:hover .partnerLogo {
+    transform: scale(1.05);
+}
+
+.navButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    border: 1px solid #e9ecef;
+    color: #007bff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.navButton:hover {
+    background: #007bff;
+    color: white;
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 123, 255, 0.3);
+}
+
+.prevButton {
+    left: -25px;
+}
+
+.nextButton {
+    right: -25px;
+}
+
+.navButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    border: 1px solid #e9ecef;
+    color: #007bff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.navButton:hover {
+    background: #007bff;
+    color: white;
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 123, 255, 0.3);
+}
+
+.prevButton {
+    left: -25px;
+}
+
+.nextButton {
+    right: -25px;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .emblaSlide {
+        flex: 0 0 25%;
+    }
+}
+
+@media (max-width: 992px) {
+    .emblaSlide {
+        flex: 0 0 33.333%;
+    }
+
+    .sectionTitle {
+        font-size: 2rem;
+    }
+
+    .navButton {
+        width: 40px;
+        height: 40px;
+    }
+
+    .prevButton {
+        left: -20px;
+    }
+
+    .nextButton {
+        right: -20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .emblaSlide {
+        flex: 0 0 50%;
+    }
+
+    .partnersSection {
+        padding: 3rem 0;
+    }
+
+    .sectionTitle {
+        font-size: 1.8rem;
+    }
+
+    .carouselWrapper {
+        margin: 0 1rem;
+    }
+
+    .navButton {
+        display: none;
+    }
+
+    .embla {
+        padding: 1.5rem 0;
+    }
+
+    .partnerCard {
+        padding: 1rem;
+    }
+
+    .logoContainer {
+        width: 100px;
+        height: 60px;
+    }
+
+    .statNumber {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .emblaSlide {
+        flex: 0 0 100%;
+    }
+
+    .sectionTitle {
+        font-size: 1.5rem;
+    }
+
+    .sectionSubtitle {
+        font-size: 1rem;
+    }
+
+    .emblaContainer {
+        gap: 0.5rem;
+    }
+
+    .partnerCard {
+        margin: 0 0.5rem;
+    }
+}
+
+/* Animation for smooth entrance */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.partnerCard {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Hover effect for the entire carousel */
+.embla:hover .partnerCard:not(:hover) {
+    opacity: 0.7;
+}
+
+.embla .partnerCard:hover {
+    opacity: 1;
+}

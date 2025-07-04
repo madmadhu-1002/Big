@@ -1,0 +1,561 @@
+.embla {
+    overflow: hidden;
+    position: relative;
+    border-radius: 24px;
+}
+
+.emblaContainer {
+    display: flex;
+}
+
+.emblaSlide {
+    flex: 0 0 100%;
+    min-width: 0;
+    position: relative;
+}
+
+.bannerContent {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    min-height: 500px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+
+}
+
+.bannerOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%);
+    z-index: 1;
+}
+
+.bannerText {
+    position: absolute;
+    z-index: 2;
+    max-width: 600px;
+    padding: 2rem;
+}
+
+.bannerTitle {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 0.1em;
+    line-height: 1.2;
+}
+
+.bannerSubtitle {
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    line-height: 1.6;
+}
+
+.bannerButton {
+    background: linear-gradient(45deg, #007bff, #0056b3);
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.bannerButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 123, 255, 0.3);
+    background: linear-gradient(45deg, #0056b3, #004085);
+}
+
+.emblaControls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.emblaButton {
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.emblaButton:hover {
+    background: white;
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.emblaButton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.emblaButton svg {
+    width: 20px;
+    height: 20px;
+    color: #333;
+}
+
+.emblaDots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.emblaDot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.emblaDot.selected {
+    background: white;
+    transform: scale(1.2);
+}
+
+.emblaDot:hover {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+/* Text Position Classes - Desktop */
+.textLeft {
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: left;
+}
+
+.textRight {
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: right;
+}
+
+.textCenter {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.textTopLeft {
+    left: 0;
+    top: 0;
+    text-align: left;
+}
+
+.textTopRight {
+    right: 0;
+    top: 0;
+    text-align: right;
+}
+
+.textTopCenter {
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.textBottomLeft {
+    left: 0;
+    bottom: 0;
+    text-align: left;
+}
+
+.textBottomRight {
+    right: 0;
+    bottom: 0;
+    text-align: right;
+}
+
+.textBottomCenter {
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+/* Animation Classes */
+.bannerTextAnimated {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.bannerTextVisible {
+    opacity: 1;
+}
+
+.bannerTitleAnimated {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 1s ease-out 0.2s;
+}
+
+.bannerTitleVisible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.bannerSubtitleAnimated {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 1s ease-out 0.4s;
+}
+
+.bannerSubtitleVisible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.bannerButtonAnimated {
+    opacity: 0;
+    transform: translateY(20px) scale(0.9);
+    transition: all 0.8s ease-out 0.6s;
+}
+
+.bannerButtonVisible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* Responsive adjustments for text positioning */
+
+/* Large Desktop (1200px and up) */
+@media (min-width: 1200px) {
+    .bannerText {
+        max-width: 700px;
+        padding: 3rem;
+    }
+
+    .bannerTitle {
+        font-size: 4rem;
+    }
+
+    .bannerSubtitle {
+        font-size: 1.4rem;
+    }
+}
+
+/* Desktop (992px to 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .bannerText {
+        max-width: 600px;
+        padding: 2.5rem;
+    }
+
+    .bannerTitle {
+        font-size: 3.5rem;
+    }
+}
+
+/* Tablet (768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .bannerContent {
+        height: 60vh;
+        min-height: 450px;
+    }
+
+    .bannerText {
+        max-width: 500px;
+        padding: 2rem;
+    }
+
+    .bannerTitle {
+        font-size: 2.8rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .bannerSubtitle {
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .bannerButton {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    /* Adjust positioning for tablet */
+    .textLeft,
+    .textRight {
+        top: 45%;
+    }
+
+    .textCenter {
+        top: 45%;
+    }
+
+    .textTopLeft,
+    .textTopRight,
+    .textTopCenter {
+        top: 1rem;
+    }
+
+    .textBottomLeft,
+    .textBottomRight,
+    .textBottomCenter {
+        bottom: 1rem;
+    }
+}
+
+/* Mobile Large (576px to 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+    .bannerContent {
+        height: 55vh;
+        min-height: 400px;
+    }
+
+    .bannerText {
+        max-width: 90%;
+        padding: 1.5rem;
+    }
+
+    .bannerTitle {
+        font-size: 2.2rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .bannerSubtitle {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .bannerButton {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    /* Simplify positioning for mobile */
+    .textLeft {
+        left: 0;
+        top: 40%;
+        transform: translateY(-50%);
+    }
+
+    .textRight {
+        right: 0;
+        top: 40%;
+        transform: translateY(-50%);
+    }
+
+    .textCenter {
+        left: 50%;
+        top: 40%;
+        transform: translate(-50%, -50%);
+    }
+
+    .textTopLeft,
+    .textTopRight {
+        top: 1rem;
+    }
+
+    .textTopCenter {
+        left: 50%;
+        top: 1rem;
+        transform: translateX(-50%);
+    }
+
+    .textBottomLeft,
+    .textBottomRight {
+        bottom: 1rem;
+    }
+
+    .textBottomCenter {
+        left: 50%;
+        bottom: 1rem;
+        transform: translateX(-50%);
+    }
+
+    .emblaButton {
+        width: 40px;
+        height: 40px;
+    }
+
+    .emblaButton svg {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+/* Mobile Small (up to 575px) */
+@media (max-width: 575px) {
+    .bannerContent {
+        height: 50vh;
+        min-height: 350px;
+    }
+
+    .bannerText {
+        max-width: 95%;
+        padding: 1rem;
+    }
+
+    .bannerTitle {
+        font-size: 1.8rem;
+        margin-bottom: 0.6rem;
+        line-height: 1.1;
+    }
+
+    .bannerSubtitle {
+        font-size: 1rem;
+        margin-bottom: 1.2rem;
+        line-height: 1.4;
+    }
+
+    .bannerButton {
+        padding: 0.6rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    /* Force center alignment on very small screens for better readability */
+    .textLeft,
+    .textRight,
+    .textCenter,
+    .textTopLeft,
+    .textTopRight,
+    .textTopCenter,
+    .textBottomLeft,
+    .textBottomRight,
+    .textBottomCenter {
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        max-width: 90%;
+    }
+
+    .textLeft,
+    .textRight,
+    .textCenter {
+        top: 35%;
+        transform: translate(-50%, -50%);
+    }
+
+    .textTopLeft,
+    .textTopRight,
+    .textTopCenter {
+        top: 1rem;
+        transform: translateX(-50%);
+    }
+
+    .textBottomLeft,
+    .textBottomRight,
+    .textBottomCenter {
+        bottom: 1rem;
+        transform: translateX(-50%);
+    }
+
+    .emblaControls {
+        gap: 0.5rem;
+        margin-top: 1rem;
+    }
+
+    .emblaButton {
+        width: 35px;
+        height: 35px;
+    }
+
+    .emblaButton svg {
+        width: 14px;
+        height: 14px;
+    }
+
+    .emblaDot {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+/* Extra small screens (up to 400px) */
+@media (max-width: 400px) {
+    .bannerContent {
+        height: 45vh;
+        min-height: 300px;
+    }
+
+    .bannerText {
+        padding: 0.8rem;
+    }
+
+    .bannerTitle {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .bannerSubtitle {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
+
+    .bannerButton {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.8rem;
+    }
+}
+
+/* Animation adjustments for positioned elements */
+.textLeft.bannerTextVisible,
+.textTopLeft.bannerTextVisible,
+.textBottomLeft.bannerTextVisible {
+    transform: translateY(0);
+}
+
+.textRight.bannerTextVisible,
+.textTopRight.bannerTextVisible,
+.textBottomRight.bannerTextVisible {
+    transform: translateY(0);
+}
+
+.textCenter.bannerTextVisible {
+    transform: translate(-50%, -50%);
+}
+
+.textTopCenter.bannerTextVisible {
+    transform: translateX(-50%);
+}
+
+.textBottomCenter.bannerTextVisible {
+    transform: translateX(-50%);
+}
+
+/* Ensure animations work with positioning */
+@media (min-width: 576px) {
+    .textLeft.bannerTextVisible {
+        transform: translateY(-50%);
+    }
+
+    .textRight.bannerTextVisible {
+        transform: translateY(-50%);
+    }
+
+    .textCenter.bannerTextVisible {
+        transform: translate(-50%, -50%);
+    }
+}

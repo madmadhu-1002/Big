@@ -1,0 +1,61 @@
+.container {
+    max-width: 100%;
+    margin: auto;
+    padding: 1rem;
+}
+
+.embla {
+    overflow: hidden;
+    width: 100%;
+}
+
+.embla__container {
+    display: flex;
+}
+
+.embla__slide {
+    position: relative;
+    flex: 0 0 100%;
+    padding: 10px;
+    box-sizing: border-box;
+
+}
+
+.embla__slide img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.emblaThumb {
+    overflow: hidden;
+    margin-top: 1rem;
+}
+
+.embla__containerThumb {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.embla__slideThumb {
+    flex: 0 0 auto;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    opacity: 0.6;
+    padding: 0;
+}
+
+.embla__slideThumb img {
+    width: 80px;
+    height: auto;
+    border-radius: 6px;
+    transition: opacity 0.3s ease;
+}
+
+.selectedThumb img {
+    opacity: 1;
+    border: 2px solid #007bff;
+}

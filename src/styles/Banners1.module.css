@@ -1,0 +1,374 @@
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.embla {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.emblaContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.emblaSlide {
+    flex: 0 0 100%;
+    min-height: 0;
+}
+
+.bannerSlide {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.bannerOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.2) 100%);
+}
+
+.headerSection {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+
+.headerContent {
+    text-align: center;
+    color: white;
+    padding: 0 2rem;
+    pointer-events: auto;
+}
+
+.mainTitle {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    line-height: 1.2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.whiteText {
+    color: white;
+}
+
+.separator {
+    color: white;
+    margin: 0 0.5rem;
+}
+
+.blueText {
+    color: #007bff;
+    min-width: 350px;
+    text-align: left;
+}
+
+.description {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    line-height: 1.6;
+}
+
+.buttonGroup {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.button {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: capitalize;
+    min-width: 150px;
+}
+
+.primaryButton {
+    background: #007bff;
+    color: white;
+}
+
+.primaryButton:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 123, 255, 0.3);
+}
+
+.secondaryButton {
+    background: white;
+    color: #333;
+}
+
+.secondaryButton:hover {
+    background: #f8f9fa;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 15;
+    pointer-events: auto;
+}
+
+.sidebarContent {
+    background: #007bff;
+    color: white;
+    padding: 1rem 0.5rem;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-weight: 600;
+    border-radius: 10px 0 0 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.sidebarContent:hover {
+    background: #0056b3;
+    padding-left: 1rem;
+}
+
+/* Horizontal Navigation Controls */
+.navigationControls {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 15;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    pointer-events: auto;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navButton {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navButton:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+.slideIndicators {
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.activeIndicator {
+    background: #007bff;
+    transform: scale(1.4);
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+/* Play/Pause Control */
+.playControl {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    z-index: 15;
+    pointer-events: auto;
+}
+
+.playPauseButton {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 0.8rem;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.playPauseButton:hover {
+    background: rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .mainTitle {
+        font-size: 3rem;
+    }
+
+    .blueText {
+        min-width: 180px;
+    }
+}
+
+@media (max-width: 992px) {
+    .mainTitle {
+        font-size: 2.5rem;
+    }
+
+    .description {
+        font-size: 1.1rem;
+    }
+
+    .headerContent {
+        padding: 0 1.5rem;
+    }
+
+    .blueText {
+        min-width: 150px;
+    }
+}
+
+@media (max-width: 768px) {
+    .mainTitle {
+        font-size: 2rem;
+        white-space: normal;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .separator {
+        display: none;
+    }
+
+    .blueText {
+        min-width: auto;
+        text-align: center;
+    }
+
+    .description {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .buttonGroup {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .headerContent {
+        padding: 0 1rem;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .navigationControls {
+        gap: 1rem;
+        padding: 0.8rem 1.5rem;
+    }
+
+    .navButton {
+        width: 35px;
+        height: 35px;
+    }
+
+    .playControl {
+        top: 1rem;
+        right: 1rem;
+    }
+
+    .playPauseButton {
+        width: 40px;
+        height: 40px;
+        padding: 0.6rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .mainTitle {
+        font-size: 1.6rem;
+    }
+
+    .description {
+        font-size: 0.9rem;
+    }
+
+    .button {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .navigationControls {
+        bottom: 1rem;
+        gap: 0.8rem;
+        padding: 0.6rem 1rem;
+    }
+
+    .indicator {
+        width: 10px;
+        height: 10px;
+    }
+}

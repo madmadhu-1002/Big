@@ -50,7 +50,8 @@ header {
 }
 
 .content-wrapper {
-  padding-top: 80px; /* Match the header height */
+  padding-top: 80px;
+  /* Match the header height */
 }
 
 .slider-container {
@@ -58,4 +59,21 @@ header {
   max-width: 1200px;
   margin: 3rem auto;
   padding: 0 1rem;
+}
+
+.nav-tab {
+  background: #f8f9fa;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 24px;
+  margin: 0 8px;
+  color: #6c757d;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.nav-tab.active {
+  background: #17a2b8;
+  color: white;
+  box-shadow: 0 4px 12px rgba(23, 162, 184, 0.3);
 }

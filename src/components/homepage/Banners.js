@@ -50,9 +50,8 @@ export default function Banner() {
       {bannerData.map((banner, index) => (
         <div
           key={banner.id}
-          className={`position-absolute w-100 h-100 transition-opacity ${
-            index === currentBanner ? "opacity-100" : "opacity-0"
-          }`}
+          className={`position-absolute w-100 h-100 transition-opacity ${index === currentBanner ? "opacity-100" : "opacity-0"
+            }`}
           style={{
             backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(${banner.image})`,
             backgroundSize: "cover",
@@ -61,33 +60,33 @@ export default function Banner() {
         >
           {/* Overlay Content */}
           <div className="d-flex align-items-center justify-content-center h-100">
-  <div className="text-center text-white px-4">
-    <h1
-      className="display-4 fw-bold mb-3"
-      style={{
-        textShadow: "2px 2px 4px rgba(0,0,0,0.7)",
-        fontSize: "clamp(1.5rem, 4vw, 3rem)",
-        display: "flex",
-        justifyContent: "center",
-        flexWrap: "wrap",
-        gap: "0.5rem",
-      }}
-    >
-      Bahwan International Group |
-      <span
-        style={{
-          display: "inline-block",
-          maxWidth: "250px",
-          whiteSpace: "nowrap",
-          overflow: "hidden",
-          textOverflow: "ellipsis",
-        }}
-      >
-        {banner.dynamicText}
-      </span>
-    </h1>
-  </div>
-</div>
+            <div className="text-center text-white px-4">
+              <h1
+                className="display-4 fw-bold mb-3"
+                style={{
+                  textShadow: "2px 2px 4px rgba(0,0,0,0.7)",
+                  fontSize: "clamp(1.5rem, 4vw, 3rem)",
+                  display: "flex",
+                  justifyContent: "center",
+                  flexWrap: "wrap",
+                  gap: "0.5rem",
+                }}
+              >
+                Bahwan International Group |
+                <span
+                  style={{
+                    display: "inline-block",
+                    maxWidth: "250px",
+                    whiteSpace: "nowrap",
+                    overflow: "hidden",
+                    textOverflow: "ellipsis",
+                  }}
+                >
+                  {banner.dynamicText}
+                </span>
+              </h1>
+            </div>
+          </div>
 
         </div>
       ))}

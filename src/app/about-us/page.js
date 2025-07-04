@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import EmpoweringLivesSection from '@/components/about-us/EmpoweringLivesSection'
 import MeetTheTeam from '@/components/about-us/MeetTheTeam'
-import TransformationJourney from '@/components/about-us/TransformationJourney'
+import VideoPlayer from '@/components/ui/VideoPlayer'
 import WhatWeBelieve from '@/components/about-us/WhatWeBelieve'
 
 const bannerData = [
@@ -71,9 +71,15 @@ const AboutUsPage = () => {
 
             {/* Content Sections */}
             <EmpoweringLivesSection />
-            <TransformationJourney />
-            <MeetTheTeam />
             <WhatWeBelieve />
+            <MeetTheTeam />
+            <VideoPlayer
+                posterSrc="/assets/about-video.png"
+                videoSrc="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+                title="Our World, Our Impact "
+                subtitle="Step into our world and see how Bahwan International Group creates value across industries and borders."
+                alt="Bahwan International Group - Industrial Operations"
+            />
         </>
     )
 }
