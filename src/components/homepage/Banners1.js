@@ -179,12 +179,7 @@ export default function Banners1() {
                     </motion.div>
                 </motion.div>
 
-                {/* Get in Touch Sidebar */}
-                <div className={styles.sidebar}>
-                    <div className={styles.sidebarContent}>
-                        <span>Get in touch</span>
-                    </div>
-                </div>
+
             </div>
 
             {/* Horizontal Navigation Controls */}
@@ -208,12 +203,7 @@ export default function Banners1() {
                 </button>
             </div>
 
-            {/* Play/Pause Control */}
-            <div className={styles.playControl}>
-                <button className={styles.playPauseButton} onClick={toggleAutoplay}>
-                    {isAutoPlay ? <LuPause size={16} /> : <LuPlay size={16} />}
-                </button>
-            </div>
+
         </div>
     )
 }

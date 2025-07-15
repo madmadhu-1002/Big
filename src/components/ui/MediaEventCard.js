@@ -1,20 +1,29 @@
 import Image from "next/image";
 
 const MediaEventCard = ({ image, alt, title, description, link }) => (
-    <div className="d-flex flex-column flex-md-row bg-white rounded shadow p-3 h-100">
-        <Image
-            src={image}
-            width={150}
-            height={150}
-            className="rounded me-md-3 mb-3 mb-md-0"
-            alt={alt}
-        />
-        <div>
-            <h6 className="fw-bold">{title}</h6>
-            <p className="mb-1 small">{description}</p>
-            <a href={link || "#"} className="text-primary small">Read More..</a>
+    <div className="bg-white rounded shadow h-100 p-3">
+        <div className="row g-2 align-items-center">
+            {/* Image Column */}
+            <div className="col-12 col-md-4">
+                <div className="position-relative w-100" style={{ height: "120px" }}>
+                    <Image
+                        src={image}
+                        alt={alt}
+                        fill
+                        className="rounded object-fit-contain"
+                        style={{ objectFit: "cover" }}
+                    />
+                </div>
+            </div>
+
+            {/* Content Column */}
+            <div className="col-12 col-md-8">
+                <h6 className="fw-bold" style={{ fontSize: "1rem" }}>{title}</h6>
+                <p className="mb-1" style={{ fontSize: "12px" }}>{description}</p>
+                <a href={link || "#"} className="text-primary small">Read More..</a>
+            </div>
         </div>
     </div>
 );
 
-export default MediaEventCard
+export default MediaEventCard;

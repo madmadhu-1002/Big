@@ -1,0 +1,304 @@
+.newsSection {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    position: relative;
+}
+
+.sectionTitle {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.sectionTitle::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    border-radius: 2px;
+}
+
+.carouselWrapper {
+    position: relative;
+    margin: 0 2rem;
+}
+
+.embla {
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.emblaContainer {
+    display: flex;
+    gap: 1.5rem;
+    padding: 0 1rem;
+}
+
+.emblaSlide {
+    flex: 0 0 33.333%;
+    min-width: 0;
+    padding: 0 0.75rem;
+}
+
+.newsCard {
+    transition: all 0.3s ease;
+    border-radius: 15px !important;
+    overflow: hidden;
+    background: white;
+}
+
+.newsCard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 123, 255, 0.15) !important;
+}
+
+.imageContainer {
+    position: relative;
+    overflow: hidden;
+    height: 350px;
+}
+
+.newsImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.4s ease;
+}
+
+.newsCard:hover .newsImage {
+    transform: scale(1.05);
+}
+
+.categoryBadge {
+    top: 1rem;
+    left: 1rem;
+    z-index: 5;
+    font-size: 0.75rem;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+}
+
+/* Hover Content Animation */
+.hoverContent {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    padding: 2rem 1.5rem 1.5rem;
+    transform: translateY(100%);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    z-index: 10;
+}
+
+.newsCard:hover .hoverContent {
+    transform: translateY(0);
+}
+
+.hoverText {
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.4s ease 0.1s;
+}
+
+.newsCard:hover .hoverText {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.dateInfo {
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+
+.hoverTitle {
+    font-size: 1.25rem;
+    line-height: 1.3;
+}
+
+.hoverSubtitle {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.hoverDescription {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    opacity: 0.95;
+}
+
+.readMoreBtn {
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-size: 0.85rem;
+}
+
+.readMoreBtn:hover {
+    transform: translateX(5px);
+    background: #f8f9fa !important;
+}
+
+.cardBody {
+    padding: 1.5rem;
+}
+
+/* Navigation Buttons */
+.navButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    border: 1px solid #e9ecef;
+    color: #007bff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 15;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.navButton:hover {
+    background: #007bff;
+    color: white;
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 123, 255, 0.3);
+    border-color: #007bff;
+}
+
+.prevButton {
+    left: -25px;
+}
+
+.nextButton {
+    right: -25px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .emblaSlide {
+        flex: 0 0 50%;
+    }
+}
+
+@media (max-width: 992px) {
+    .emblaSlide {
+        flex: 0 0 50%;
+    }
+
+    .carouselWrapper {
+        margin: 0 1rem;
+    }
+
+    .navButton {
+        width: 40px;
+        height: 40px;
+    }
+
+    .prevButton {
+        left: -20px;
+    }
+
+    .nextButton {
+        right: -20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .emblaSlide {
+        flex: 0 0 100%;
+    }
+
+    .newsSection {
+        padding: 3rem 0;
+    }
+
+    .carouselWrapper {
+        margin: 0;
+    }
+
+    .navButton {
+        display: none;
+    }
+
+    .imageContainer {
+        height: 200px;
+    }
+
+    .hoverContent {
+        padding: 1.5rem 1rem 1rem;
+    }
+
+    .hoverTitle {
+        font-size: 1.1rem;
+    }
+
+    .hoverDescription {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .emblaContainer {
+        gap: 1rem;
+        padding: 0 0.5rem;
+    }
+
+    .emblaSlide {
+        padding: 0 0.25rem;
+    }
+
+    .cardBody {
+        padding: 1rem;
+    }
+
+    .imageContainer {
+        height: 180px;
+    }
+}
+
+/* Animation for card entrance */
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.newsCard {
+    animation: slideInUp 0.6s ease-out;
+}
+
+/* Staggered animation delay for multiple cards */
+.emblaSlide:nth-child(1) .newsCard {
+    animation-delay: 0s;
+}
+
+.emblaSlide:nth-child(2) .newsCard {
+    animation-delay: 0.1s;
+}
+
+.emblaSlide:nth-child(3) .newsCard {
+    animation-delay: 0.2s;
+}
+
+.emblaSlide:nth-child(4) .newsCard {
+    animation-delay: 0.3s;
+}
+
+.emblaSlide:nth-child(5) .newsCard {
+    animation-delay: 0.4s;
+}

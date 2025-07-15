@@ -35,7 +35,7 @@ const SlidingCards = () => {
                 {/* Business Cards */}
                 <div className="row g-4">
                     {/* Changan Auto Card */}
-                    <div className="col-lg-4 col-md-6">
+                    <div className="col-lg-4 col-md-6" data-aos="fade-left">
                         <div className="card h-100 shadow border-0 rounded-4 overflow-hidden">
                             <div className="position-relative">
                                 <Image
@@ -100,7 +100,7 @@ const SlidingCards = () => {
                     </div>
 
                     {/* Vinfast Card */}
-                    <div className="col-lg-4 col-md-6">
+                    <div className="col-lg-4 col-md-6" data-aos="fade-right">
                         <div className="card h-100 shadow border-0 rounded-4 overflow-hidden">
                             <div className="position-relative">
                                 <Image

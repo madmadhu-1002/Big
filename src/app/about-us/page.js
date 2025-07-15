@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import CommonBanner from '@/components/ui/CommonBanner'
 import EmpoweringLivesSection from '@/components/about-us/EmpoweringLivesSection'
 import MeetTheTeam from '@/components/about-us/MeetTheTeam'
 import VideoPlayer from '@/components/ui/VideoPlayer'
@@ -31,42 +31,12 @@ const AboutUsPage = () => {
     return (
         <>
 
-            {/* Hero Banner */}
-            <div className="position-relative w-100" style={{ height: "60vh" }}>
-                {/* Background Image */}
-                <div
-                    className="position-absolute top-0 start-0 w-100 h-100"
-                    style={{
-                        backgroundImage: `url('/assets/banners/aboutus.png')`,
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center',
-                        zIndex: 0,
-                    }}
-                ></div>
-
-                {/* Dark Overlay */}
-                <div
-                    className="position-absolute top-0 start-0 w-100 h-100"
-                    style={{
-                        backgroundColor: 'rgba(0,0,0,0.4)',
-                        zIndex: 1,
-                    }}
-                ></div>
-
-                {/* Content */}
-                <div
-                    className="position-relative text-white d-flex flex-column justify-content-center align-items-center h-100 text-center px-3"
-                    style={{ zIndex: 2 }}
-                >
-                    <h1 className="display-4 fw-bold mb-3">
-                        Driven by Vision. United by Purpose.
-                    </h1>
-                    <p className="lead">
-                        Bahwan International Group is Oman’s only multinational automotive enterprise,
-                        leading the way in vehicle sales, rentals, financing, and contracting services across five countries.
-                    </p>
-                </div>
-            </div>
+            <CommonBanner
+                imageSrc="/assets/banners/aboutus1.png"
+                title="Driven by Vision. United by Purpose."
+                subtitle="Bahwan International Group is Oman’s only multinational automotive enterprise, leading the way in vehicle sales, rentals, financing, and contracting services across 8+ countries."
+                textPosition={{ top: '55%', left: '5%' }}
+            />
 
 
             {/* Content Sections */}

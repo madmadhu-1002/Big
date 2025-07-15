@@ -1,8 +1,7 @@
 "use client"
 import React, { useState } from "react"
-import Image from 'next/image'
-import { Container, Row, Col } from 'react-bootstrap'
 import JobCard from "./ui/JobCard"
+import CommonBanner from "./ui/CommonBanner"
 
 const Career = () => {
     const [searchTerm, setSearchTerm] = useState("")
@@ -52,6 +51,16 @@ const Career = () => {
     ]
     return (
         <>
+
+            <CommonBanner
+                imageSrc="/assets/banners/career1.png"
+                title="Careers at Bahwan International Group"
+                subtitle="Building Legacy Together, One Career at a Time"
+                buttons={[
+                    { label: 'Join Us', href: '/buy' }
+                ]}
+                textPosition={{ top: '55%', left: '5%' }}
+            />
             <section className="py-5">
                 <div className="container">
                     <div className="row justify-content-center mb-5">

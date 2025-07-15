@@ -10,10 +10,10 @@ import LatestEvents from "@/components/LatestEvents";
 import ContactUs from "@/components/ContactUs";
 import LiquidGlassCard from "@/components/ui/LiquidGlassCard";
 import VideoPlayer from "@/components/ui/VideoPlayer";
-import BannerSlider from "@/components/ui/BannerSlider";
 import BannerSliderSection from "@/components/BannerSliderSection";
 import StrengthsSection from "@/components/homepage/StrengthsSection";
 import OurPartners from "@/components/homepage/OurPartners";
+import News from "@/components/homepage/News";
 
 
 
@@ -25,12 +25,12 @@ export default function Home() {
       <Overview />
       <TrackRecord />
       <BuisnessFocus />
-      <BusinessDivisionsCarousel />
+      {/* <BusinessDivisionsCarousel /> */}
       <LatestEvents />
-      <PartnersSection />
-      <UpcomingEvents />
+      {/* <PartnersSection /> */}
+      {/* <UpcomingEvents /> */}
       <ContactUs />
-      <LiquidGlassCard />
+      {/* <LiquidGlassCard /> */}
       <StrengthsSection />
       <VideoPlayer
         posterSrc="/assets/homepage-1.png"
@@ -40,6 +40,7 @@ export default function Home() {
         alt="Bahwan International Group - Industrial Operations"
       />
       <BannerSliderSection />
+      <News autoplay={true} autoplayDelay={5000} showNavigation={true} />
     </>
   );
 }

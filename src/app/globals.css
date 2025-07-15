@@ -62,7 +62,8 @@ header {
 }
 
 .nav-tab {
-  background: #f8f9fa;
+  background: rgba(242, 239, 239, 0.2);
+  backdrop-filter: blur(8px);
   border: none;
   border-radius: 25px;
   padding: 12px 24px;
@@ -76,4 +77,117 @@ header {
   background: #17a2b8;
   color: white;
   box-shadow: 0 4px 12px rgba(23, 162, 184, 0.3);
+}
+
+.hexagon {
+  width: 100px;
+  height: 100px;
+  background-color: #0d6efd;
+  /* Bootstrap Primary */
+  clip-path: polygon(50% 0%,
+      93% 25%,
+      93% 75%,
+      50% 100%,
+      7% 75%,
+      7% 25%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s;
+}
+
+.hexagon:hover {
+  transform: scale(1.1);
+  background-color: #084298;
+}
+
+.sidebar {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 15;
+  pointer-events: auto;
+}
+
+.sidebar-content {
+  background: #007bff;
+  color: white;
+  padding: 1rem 0.5rem;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-weight: 600;
+  border-radius: 10px 0 0 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.sidebar-content:hover {
+  background: #0056b3;
+  padding-left: 1rem;
+}
+
+
+
+.responsive-title {
+  font-size: 3rem;
+}
+
+.responsive-subtitle {
+  font-size: 1.5rem;
+}
+
+.responsive-button {
+  font-size: 1.2rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.375rem;
+  /* Optional */
+}
+
+.image-wrapper:hover .image-zoom {
+  transform: scale(1.1);
+}
+
+.image-zoom {
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .responsive-title {
+    font-size: 1.2rem !important;
+  }
+
+  .responsive-subtitle {
+    font-size: 0.6rem !important;
+  }
+
+  .responsive-button {
+    font-size: 0.7rem !important;
+    padding: 0.4rem 0.7rem !important;
+  }
+
+  .overlay-text {
+    top: 45% !important;
+    left: 5% !important;
+  }
+}
+
+@media (max-width: 540px) {
+  .responsive-title {
+    font-size: 0.7rem !important;
+  }
+
+  .responsive-subtitle {
+    font-size: 8px !important;
+  }
+
+  .responsive-button {
+    font-size: 0.5rem !important;
+    padding: 0.2rem 0.4rem !important;
+  }
+
+  .overlay-text {
+    top: 35% !important;
+    left: 5% !important;
+  }
 }

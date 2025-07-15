@@ -45,13 +45,13 @@ const Overview = () => {
   return (
     <>
       {/* Company Overview */}
-      <section id="about" className="py-5 bg-light">
+      <section id="about" className="py-5 bg-light" >
         <div className="container">
           <div className="row ">
-            <div className="col-lg-6 mb-4 mb-lg-0 align-items-center d-flex flex-column">
+            <div className="col-lg-6 mb-4 mb-lg-0 align-items-center d-flex flex-column" data-aos="fade-right">
               <EmblaThumbnails slides={slides} />
             </div>
-            <div className="col-lg-6 align-items-start d-flex flex-column">
+            <div className="col-lg-6 align-items-start d-flex flex-column" data-aos="fade-left">
               <h2 className="text-primary mb-3" style={{ fontSize: "60px" }}>About Bahwan International Group</h2>
               <p className="text-muted mb-4">
                 Established in 2004, Balwan International Group has grown into a dynamic, diversified conglomerate with
@@ -71,7 +71,7 @@ const Overview = () => {
       <section id="about" className="py-5 bg-light">
         <div className="container">
           <div className="row ">
-            <div className="col-lg-6 align-items-start d-flex flex-column">
+            <div className="col-lg-6 align-items-start d-flex flex-column" data-aos="fade-right">
               <h2 className="text-primary mb-3" style={{ fontSize: "60px" }}>About Bahwan International Group</h2>
               <p className="text-muted mb-4">
                 Established in 2004, Balwan International Group has grown into a dynamic, diversified conglomerate with
@@ -84,7 +84,7 @@ const Overview = () => {
               </p>
               <Button className="px-4">Know More</Button>
             </div>
-            <div className="col-lg-6 mb-4 mb-lg-0 ">
+            <div className="col-lg-6 mb-4 mb-lg-0 " data-aos="fade-left">
               <Row className="g-3 mb-3">
                 <Col sm={12}>
                   <div

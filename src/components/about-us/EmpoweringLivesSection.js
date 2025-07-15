@@ -21,7 +21,7 @@ export default function EmpoweringLivesSection() {
 
                     {/* Content Section */}
                     <div className="col-lg-7">
-                        <div className="ps-lg-4">
+                        <div className="ps-lg-4" data-aos='fade-left'>
                             <h2 className="display-6 fs-3 fw-bold text-primary mb-2">Empowering Lives Through Enterprise</h2>
 
                             <div className="content-text" style={{ lineHeight: "1.4", fontSize: "16px" }}>

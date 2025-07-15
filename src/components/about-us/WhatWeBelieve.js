@@ -7,6 +7,7 @@ export default function WhatWeBelieve() {
             title: "Vision",
             icon: <FaEye className="text-primary fs-2" />,
             description: "A Globally recognized business group creating customers for life",
+            aos: "fade-left",
         },
         {
             id: 2,
@@ -20,6 +21,7 @@ export default function WhatWeBelieve() {
             title: "Core Values",
             icon: <FaHandshake className="text-primary fs-2" />,
             values: ["Integrity", "Ownership", "Passion", "Excellence"],
+            aos: "fade-right",
         },
     ]
 
@@ -32,7 +34,11 @@ export default function WhatWeBelieve() {
 
                 <div className="row g-4 justify-content-center">
                     {beliefs.map((belief) => (
-                        <div key={belief.id} className="col-lg-4 col-md-6">
+                        <div
+                            key={belief.id}
+                            className="col-lg-4 col-md-6"
+                            data-aos={belief.aos || ""}
+                        >
                             <div
                                 className="card border-0 shadow-lg h-100 text-center text-white"
                                 style={{

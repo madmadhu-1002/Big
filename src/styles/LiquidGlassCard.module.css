@@ -1,8 +1,11 @@
 .mainContainer {
-    background: rgba(255, 255, 255, 0.15);
+    position: absolute;
+    top: 20px;
+    left: 20px;
     border-radius: 20px;
     box-shadow: 0px 4px 4px 0px #00000040;
-    backdrop-filter: blur(8.100000381469727px);
+    background: rgba(242, 239, 239, 0.2);
+    backdrop-filter: blur(8px);
 }
 
 .indianFlag {
@@ -35,10 +38,10 @@
 
 .companyCard {
     background: rgba(255, 255, 255, 0.25);
-    border-radius: 15px;
+    border-radius: 35px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     border: none;
-    height: 100px;
+    height: 60px;
     transition: transform 0.2s ease;
 }
 

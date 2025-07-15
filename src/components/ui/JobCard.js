@@ -63,7 +63,7 @@ const JobCard = ({
                 <div className="mb-4">
                     <div className="d-flex flex-wrap gap-2">
                         {skills.map((skill, index) => (
-                            <span key={index} className="badge bg-light text-dark border">
+                            <span key={index} className="badge bg-primary text-dark border">
                                 {skill}
                             </span>
                         ))}

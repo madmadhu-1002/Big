@@ -141,31 +141,7 @@
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
-.sidebar {
-    position: fixed;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 15;
-    pointer-events: auto;
-}
 
-.sidebarContent {
-    background: #007bff;
-    color: white;
-    padding: 1rem 0.5rem;
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-    font-weight: 600;
-    border-radius: 10px 0 0 10px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.sidebarContent:hover {
-    background: #0056b3;
-    padding-left: 1rem;
-}
 
 /* Horizontal Navigation Controls */
 .navigationControls {
